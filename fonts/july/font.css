@@ -1,0 +1,31 @@
+@font-face {
+  font-family: 'July';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+  src: url('July-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'July';
+  font-display: swap;
+  font-style: italic;
+  font-weight: 400;
+  src: url('July-Italic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'July';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 700;
+  src: url('July-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'July';
+  font-display: swap;
+  font-style: italic;
+  font-weight: 700;
+  src: url('July-Bold-Italic.ttf') format('truetype');
+}

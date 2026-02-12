@@ -1,0 +1,15 @@
+@font-face {
+  font-family: 'Hadi';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+  src: url('Hadi.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Hadi Rounded';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+  src: url('Hadi (Rounded).ttf') format('truetype');
+}

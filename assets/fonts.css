@@ -1,0 +1,86 @@
+/**
+ * Bangla Web Fonts CDN - Font Declarations
+ * Developer: Sadi Jubair
+ * Website: https://fonts.sadi.com.bd
+ */
+
+/* BCC Purno Font */
+@font-face {
+  font-family: 'BCC Purno';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 100 900;
+  src: url('/fonts/bcc-purno/BCC Purno.woff2') format('woff2'),
+       url('/fonts/bcc-purno/BCC Purno.woff') format('woff');
+}
+
+/* Hadi Font */
+@font-face {
+  font-family: 'Hadi';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/hadi/Hadi.ttf') format('truetype');
+}
+
+/* Hadi Rounded Font */
+@font-face {
+  font-family: 'Hadi Rounded';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/hadi/Hadi (Rounded).ttf') format('truetype');
+}
+
+/* July Font - Regular */
+@font-face {
+  font-family: 'July';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/july/July-Regular.ttf') format('truetype');
+}
+
+/* July Font - Italic */
+@font-face {
+  font-family: 'July';
+  font-display: swap;
+  font-style: italic;
+  font-weight: 400;
+  src: url('/fonts/july/July-Italic.ttf') format('truetype');
+}
+
+/* July Font - Bold */
+@font-face {
+  font-family: 'July';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 700;
+  src: url('/fonts/july/July-Bold.ttf') format('truetype');
+}
+
+/* July Font - Bold Italic */
+@font-face {
+  font-family: 'July';
+  font-display: swap;
+  font-style: italic;
+  font-weight: 700;
+  src: url('/fonts/july/July-Bold-Italic.ttf') format('truetype');
+}
+
+/* Utility Classes */
+.font-bcc-purno {
+  font-family: 'BCC Purno', sans-serif;
+}
+
+.font-hadi {
+  font-family: 'Hadi', sans-serif;
+}
+
+.font-hadi-rounded {
+  font-family: 'Hadi Rounded', sans-serif;
+}
+
+.font-july {
+  font-family: 'July', sans-serif;
+}

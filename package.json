@@ -1,0 +1,26 @@
+{
+  "name": "bangla-web-fonts",
+  "version": "1.0.0",
+  "description": "Free Bangla Web Fonts CDN - Beautiful Bengali typography for the web",
+  "main": "index.html",
+  "keywords": [
+    "bangla",
+    "bengali",
+    "fonts",
+    "web-fonts",
+    "cdn",
+    "typography",
+    "bengali-fonts",
+    "bangla-fonts"
+  ],
+  "author": "Sadi Jubair",
+  "license": "SEE LICENSE IN README.md",
+  "homepage": "https://fonts.sadi.com.bd",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/bangla-web-fonts.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/bangla-web-fonts/issues"
+  }
+}
