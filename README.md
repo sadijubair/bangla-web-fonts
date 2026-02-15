@@ -1,236 +1,102 @@
-# Bangla Web Fonts CDN
+<p align="right">
+    <a href="https://badge.fury.io/rb/just-the-docs"><img src="https://badge.fury.io/rb/just-the-docs.svg" alt="Gem version"></a> <a href="https://github.com/just-the-docs/just-the-docs/actions/workflows/ci.yml"><img src="https://github.com/just-the-docs/just-the-docs/actions/workflows/ci.yml/badge.svg" alt="CI Build status"></a> <a href="https://app.netlify.com/sites/just-the-docs/deploys"><img src="https://api.netlify.com/api/v1/badges/9dc0386d-c2a4-4077-ad83-f02c33a6c0ca/deploy-status" alt="Netlify Status"></a>
+</p>
+<br><br>
+<p align="center">
+    <h1 align="center">Just the Docs</h1>
+    <p align="center">A modern, highly customizable, and responsive Jekyll theme for documentation with built-in search.<br>Easily hosted on GitHub Pages with few dependencies.</p>
+    <p align="center"><strong><a href="https://just-the-docs.com/">See it in action!</a></strong></p>
+    <br><br><br>
+</p>
 
-![License](https://img.shields.io/badge/license-Open%20Source-green)
-![Fonts](https://img.shields.io/badge/fonts-3-blue)
-![Status](https://img.shields.io/badge/status-active-success)
+<p align="center">A video walkthrough of various Just the Docs features</p>
 
-Free Bangla Web Fonts CDN for beautiful Bengali typography on the web. Project by **Sadi Jubair**.
+https://user-images.githubusercontent.com/85418632/211225192-7e5d1116-2f4f-4305-bb9b-437fe47df071.mp4
 
-## 🌐 Website
-**[fonts.sadi.com.bd](https://fonts.sadi.com.bd)**
+## Installation
 
-## ✨ Features
+### Use the template
 
-- ⚡ **Lightning Fast** - Optimized web fonts with WOFF2 format
-- 🌍 **GitHub CDN** - Reliable global content delivery via GitHub
-- 💯 **Free & Open** - 100% free for personal and commercial use
-- 🎨 **Beautiful Typography** - High-quality Bengali fonts
-- 📱 **Responsive** - Works perfectly on all devices
+The [Just the Docs Template] provides the simplest, quickest, and easiest way to create a new website that uses the Just the Docs theme. To get started with creating a site, just click "[use the template]"!
 
-## 🚀 Quick Start
+Note: To use the theme, you do ***not*** need to clone or fork the [Just the Docs repo]! You should do that only if you intend to browse the theme docs locally, contribute to the development of the theme, or develop a new theme based on Just the Docs.
 
-### Method 1: HTML Link (Recommended)
+You can easily set the site created by the template to be published on [GitHub Pages] – the [template README] file explains how to do that, along with other details.
 
-Add this in the `<head>` section of your HTML:
+If [Jekyll] is installed on your computer, you can also build and preview the created site *locally*. This lets you test changes before committing them, and avoids waiting for GitHub Pages.[^2] And you will be able to deploy your local build to a different platform than GitHub Pages.
 
-```html
-<link href="https://fonts.sadi.com.bd/fonts/bcc-purno/font.css" rel="stylesheet">
+More specifically, the created site:
+
+- uses a gem-based approach, i.e. uses a `Gemfile` and loads the `just-the-docs` gem
+- uses the [GitHub Pages / Actions workflow] to build and publish the site on GitHub Pages
+
+Other than that, you're free to customize sites that you create with the template, however you like. You can easily change the versions of `just-the-docs` and Jekyll it uses, as well as adding further plugins.
+
+### Use as a Ruby Gem
+
+Alternatively, you can install the theme as a Ruby Gem, without creating a new site.
+
+Add this line to your Jekyll site's `Gemfile`:
+
+```ruby
+gem "just-the-docs"
 ```
 
-### Method 2: CSS Import
+And add this line to your Jekyll site's `_config.yml`:
 
-Import in your CSS file:
-
-```css
-@import url('https://fonts.sadi.com.bd/fonts/bcc-purno/font.css');
+```yaml
+theme: just-the-docs
 ```
 
-### Use the Font
+And then install all relevant dependencies:
 
-Apply the font in your CSS:
-
-```css
-body {
-  font-family: 'BCC Purno', sans-serif;
-}
-
-.bangla-text {
-  font-family: 'BCC Purno', sans-serif;
-}
+```shell
+$ bundle
 ```
 
-## 📚 Available Fonts
+## Usage
 
-### 1. BCC Purno
-Modern and clean Bengali font
-- **Formats:** WOFF2, WOFF
-- **CDN:** `https://fonts.sadi.com.bd/fonts/bcc-purno/font.css`
-- **Family:** `'BCC Purno', sans-serif`
+[View the documentation][Just the Docs] for usage information.
 
-### 2. Hadi
-Elegant Bengali typography
-- **Formats:** TrueType (TTF)
-- **Variants:** Hadi, Hadi Rounded
-- **CDN:** `https://fonts.sadi.com.bd/fonts/hadi/font.css`
-- **Family:** `'Hadi', sans-serif`
+## Contributing
 
-### 3. July
-Versatile font with multiple weights
-- **Formats:** TrueType (TTF)
-- **Weights:** Regular (400), Bold (700)
-- **Styles:** Normal, Italic
-- **CDN:** `https://fonts.sadi.com.bd/fonts/july/font.css`
-- **Family:** `'July', sans-serif`
+Bug reports, proposals of new features, and pull requests are welcome on GitHub at https://github.com/just-the-docs/just-the-docs. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
-## 📁 Project Structure
+### Submitting code changes:
 
-```
-bangla-web-fonts/
-├── fonts/
-│   ├── bcc-purno/
-│   │   ├── BCC Purno.woff
-│   │   ├── BCC Purno.woff2
-│   │   └── font.css
-│   ├── hadi/
-│   │   ├── Hadi.ttf
-│   │   ├── Hadi (Rounded).ttf
-│   │   └── font.css
-│   └── july/
-│       ├── July-Regular.ttf
-│       ├── July-Italic.ttf
-│       ├── July-Bold.ttf
-│       ├── July-Bold-Italic.ttf
-│       └── font.css
-├── assets/
-│   ├── app.js
-│   └── fonts.css
-├── index.html
-├── bcc-purno.html
-├── hadi.html
-├── july.html
-└── README.md
-```
+- Submit an [Issue](https://github.com/just-the-docs/just-the-docs/issues) that motivates the changes, using the appropriate template
+- Discuss the proposed changes with other users and the maintainers
+- Open a [Pull Request](https://github.com/just-the-docs/just-the-docs/pulls)
+- Ensure all CI tests pass
+- Provide instructions to check the effect of the changes
+- Await code review
 
-## 🛠️ Development
+### Design and development principles of this theme:
 
-### Local Setup
+1. As few dependencies as possible
+2. No build script needed
+3. First class mobile experience
+4. Make the content shine
 
-1. Clone the repository:
-```bash
-git clone https://github.com/yourusername/bangla-web-fonts.git
-cd bangla-web-fonts
-```
+## Development
 
-2. Open `index.html` in your browser or use a local server:
-```bash
-# Using Python
-python -m http.server 8000
+To set up your environment to develop this theme: fork this repo, the run `bundle install` from the root directory.
 
-# Using Node.js http-server
-npx http-server
+Your theme is set up just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
 
-# Using PHP
-php -S localhost:8000
-```
+When this theme is released, only the files in `_layouts`, `_includes`, and `_sass` tracked with Git will be included in the gem.
 
-3. Visit `http://localhost:8000` in your browser
+## License
 
-## 🌐 Deployment
+The theme is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
 
-### GitHub Pages
+[^2]: [It can take up to 10 minutes for changes to your site to publish after you push the changes to GitHub](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll#creating-your-site).
 
-1. Push your code to GitHub
-2. Go to repository **Settings** → **Pages**
-3. Select source: **Deploy from a branch**
-4. Choose branch: **main** and folder: **/ (root)**
-5. Click **Save**
-6. Your site will be live at: `https://yourusername.github.io/bangla-web-fonts/`
-
-### Custom Domain Setup
-
-1. Add a `CNAME` file in the root directory:
-```
-fonts.sadi.com.bd
-```
-
-2. Configure DNS at your domain provider:
-   - Add A records pointing to GitHub Pages IPs:
-     - 185.199.108.153
-     - 185.199.109.153
-     - 185.199.110.153
-     - 185.199.111.153
-   - Or add CNAME record: `yourusername.github.io`
-
-3. Enable HTTPS in GitHub Pages settings
-
-## 📖 Usage Examples
-
-### Basic Usage
-```html
-<!DOCTYPE html>
-<html lang="bn">
-<head>
-  <meta charset="UTF-8">
-  <link href="https://fonts.sadi.com.bd/fonts/july/font.css" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'July', sans-serif;
-    }
-  </style>
-</head>
-<body>
-  <h1>বাংলা ওয়েব ফন্ট</h1>
-  <p>আমি বাংলায় মাতি উল্লাসে</p>
-</body>
-</html>
-```
-
-### Multiple Fonts
-```html
-<link href="https://fonts.sadi.com.bd/fonts/bcc-purno/font.css" rel="stylesheet">
-<link href="https://fonts.sadi.com.bd/fonts/july/font.css" rel="stylesheet">
-
-<style>
-  h1 { font-family: 'BCC Purno', sans-serif; }
-  p { font-family: 'July', sans-serif; }
-</style>
-```
-
-## 👨‍💻 Developer
-
-**Sadi Jubair**
-- Website: [fonts.sadi.com.bd](https://fonts.sadi.com.bd)
-- Project: Bangla Web Fonts CDN
-
-## 📄 License
-
-This project is open source. Each font comes with its own license. Please refer to individual font folders for specific license details.
-
-### Font Licenses
-- **BCC Purno**: See font license file
-- **Hadi**: See font license file
-- **July**: See font license file
-
-### Website Content
-The website and documentation are available under open-source terms. Feel free to use, modify, and distribute.
-
-## 🤝 Contributing
-
-Contributions are welcome! Feel free to:
-- Add new Bengali fonts
-- Improve documentation
-- Report bugs
-- Suggest features
-
-Please ensure fonts are properly licensed for web distribution.
-
-## 🙏 Acknowledgments
-
-Special thanks to the original font creators and the Bengali typography community.
-
-## 📞 Support
-
-- **Issues**: [GitHub Issues](https://github.com/yourusername/bangla-web-fonts/issues)
-- **Website**: [fonts.sadi.com.bd](https://fonts.sadi.com.bd)
-
----
-
-<div align="center">
-  
-**Made with ❤️ by Sadi Jubair**
-
-© 2026 Bangla Web Fonts CDN. All fonts respect their original licenses.
-
-[Website](https://fonts.sadi.com.bd) • [GitHub](https://github.com/yourusername/bangla-web-fonts)
-
-</div>
+[Jekyll]: https://jekyllrb.com
+[Just the Docs Template]: https://just-the-docs.github.io/just-the-docs-template/
+[Just the Docs]: https://just-the-docs.com
+[Just the Docs repo]: https://github.com/just-the-docs/just-the-docs
+[GitHub Pages]: https://pages.github.com/
+[Template README]: https://github.com/just-the-docs/just-the-docs-template/blob/main/README.md
+[GitHub Pages / Actions workflow]: https://github.blog/changelog/2022-07-27-github-pages-custom-github-actions-workflows-beta/
+[use the template]: https://github.com/just-the-docs/just-the-docs-template/generate

@@ -1,40 +1,11 @@
-<!DOCTYPE html>
-<html lang="bn">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>404 - Page Not Found | Bangla Web Fonts CDN</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔤</text></svg>">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    .gradient-bg {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    }
-  </style>
-</head>
-<body class="bg-gray-50">
-  <div class="min-h-screen flex items-center justify-center px-4">
-    <div class="text-center">
-      <div class="gradient-bg text-white inline-block px-8 py-4 rounded-full mb-6">
-        <h1 class="text-6xl font-bold">404</h1>
-      </div>
-      <h2 class="text-3xl font-bold text-gray-800 mb-4">পাতা পাওয়া যায়নি</h2>
-      <p class="text-xl text-gray-600 mb-8">Page Not Found</p>
-      <p class="text-gray-600 mb-8 max-w-md mx-auto">
-        The page you are looking for doesn't exist or has been moved.
-      </p>
-      <div class="space-x-4">
-        <a href="/index.html" class="inline-block bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition">
-          Go to Homepage
-        </a>
-        <a href="javascript:history.back()" class="inline-block bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition">
-          Go Back
-        </a>
-      </div>
-      <div class="mt-12 text-gray-500">
-        <p>Bangla Web Fonts CDN by Sadi Jubair</p>
-      </div>
-    </div>
-  </div>
-</body>
-</html>
+---
+layout: default
+title: 404
+permalink: /404
+nav_exclude: true
+search_exclude: true
+---
+
+<h1>Page not found</h1>
+
+<p>The page you requested could not be found. Try using the navigation {% if site.search_enabled != false %}or search {% endif %}to find what you're looking for or go to this <a href="{{ '/' | relative_url }}">site's home page</a>.</p>
