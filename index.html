@@ -1,245 +1,532 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bangla Web Fonts CDN</title>
+  <title>Bangla Web Fonts CDN | Sadi Jubair</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    /* Rich Animated Background & Custom Scrollbar */
+    :root {
+      --ink: #0f172a;
+      --muted: #475569;
+      --panel: rgba(255, 255, 255, 0.72);
+      --line: rgba(15, 23, 42, 0.12);
+    }
+
     body {
-      background-color: #0f172a; /* Slate 900 */
-      color: #f8fafc;
-      overflow-x: hidden;
-    }
-    
-    /* Animated glowing orbs in the background */
-    .bg-orb {
-      position: fixed;
-      border-radius: 50%;
-      filter: blur(100px);
-      z-index: -1;
-      animation: float 12s infinite ease-in-out alternate;
-    }
-    .orb-1 {
-      width: 500px; height: 500px;
-      background: rgba(99, 102, 241, 0.25); /* Indigo */
-      top: -150px; left: -150px;
-    }
-    .orb-2 {
-      width: 400px; height: 400px;
-      background: rgba(236, 72, 153, 0.2); /* Pink */
-      bottom: -100px; right: -100px;
-      animation-delay: -6s;
-    }
-    
-    @keyframes float {
-      0% { transform: translate(0, 0) scale(1); }
-      100% { transform: translate(40px, 60px) scale(1.1); }
+      font-family: "Hind Siliguri", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 8% 12%, rgba(20, 184, 166, 0.2), rgba(20, 184, 166, 0) 28%),
+        radial-gradient(circle at 94% 2%, rgba(249, 115, 22, 0.18), rgba(249, 115, 22, 0) 26%),
+        radial-gradient(circle at 84% 92%, rgba(6, 182, 212, 0.2), rgba(6, 182, 212, 0) 30%),
+        linear-gradient(180deg, #eff6ff 0%, #f8fafc 48%, #eefbf9 100%);
+      min-height: 100vh;
     }
 
-    /* Custom scrollbar for textareas */
-    textarea::-webkit-scrollbar {
-      width: 6px;
+    h1,
+    h2 {
+      font-family: "Space Grotesk", "Hind Siliguri", sans-serif;
+      letter-spacing: -0.02em;
     }
-    textarea::-webkit-scrollbar-thumb {
-      background-color: rgba(255, 255, 255, 0.2);
-      border-radius: 4px;
+
+    .mesh {
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(rgba(15, 23, 42, 0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(15, 23, 42, 0.04) 1px, transparent 1px);
+      background-size: 36px 36px;
+      mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.34), transparent 66%);
+      pointer-events: none;
     }
-    
-    /* Smooth CSS transitions for the JS copy effect */
-    .copy-success {
-      background-color: rgba(16, 185, 129, 0.2) !important;
-      color: #34d399 !important;
-      border-color: rgba(16, 185, 129, 0.5) !important;
-      box-shadow: 0 0 15px rgba(16, 185, 129, 0.2);
+
+    .orb {
+      position: absolute;
+      border-radius: 999px;
+      filter: blur(50px);
+      opacity: 0.55;
+      pointer-events: none;
+      z-index: 0;
     }
-  </style>
-</head>
-<body class="min-h-screen font-sans antialiased relative selection:bg-indigo-500/30">
-  
-  <div class="bg-orb orb-1"></div>
-  <div class="bg-orb orb-2"></div>
 
-  <div class="container mx-auto px-4 py-16 max-w-7xl relative z-10">
-    
-    <header class="mb-16 text-center">
-      <h1 class="text-5xl md:text-6xl font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 tracking-tight drop-shadow-sm">
-        Bangla Web Fonts
-      </h1>
-      <p class="text-lg text-slate-300 max-w-2xl mx-auto font-light leading-relaxed">
-        Import and preview beautiful Bangla typography. Copy the CSS links or embed codes instantly for your next modern web project.
-      </p>
-    </header>
+    .orb-a {
+      top: 14px;
+      left: -20px;
+      width: 220px;
+      height: 220px;
+      background: #5eead4;
+    }
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      
-      <div class="group bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-7 shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:bg-white/[0.07] hover:border-white/20 hover:shadow-[0_0_40px_-10px_rgba(99,102,241,0.3)] flex flex-col relative overflow-hidden">
-        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-indigo-500 to-purple-500 opacity-70 group-hover:opacity-100 transition-opacity"></div>
-        
-        <h2 class="text-2xl font-bold mb-6 text-white tracking-wide">BCC Purno</h2>
-        
-        <div class="w-full mb-5">
-          <div class="flex items-center justify-between mb-2">
-            <label class="text-[11px] font-bold text-slate-400 uppercase tracking-widest">Import CSS</label>
-            <button class="px-3 py-1.5 bg-white/5 hover:bg-white/10 border border-white/5 rounded-lg text-xs font-medium text-slate-300 transition-all duration-200" onclick="copyToClipboard(this, '@import url(\'https://fonts.sadi.com.bd/fonts/bcc-purno/font.css\');')">Copy</button>
-          </div>
-          <input class="w-full bg-black/20 border border-white/10 px-4 py-2.5 rounded-xl text-sm text-slate-300 focus:outline-none focus:border-indigo-400 focus:ring-1 focus:ring-indigo-400 transition-all font-mono" readonly value="@import url('https://fonts.sadi.com.bd/fonts/bcc-purno/font.css');">
-        </div>
+    .orb-b {
+      right: -26px;
+      top: -18px;
+      width: 220px;
+      height: 220px;
+      background: #fed7aa;
+    }
 
-        <div class="w-full mb-5">
-          <div class="flex items-center justify-between mb-2">
-            <label class="text-[11px] font-bold text-slate-400 uppercase tracking-widest">Embed Link</label>
-            <button class="px-3 py-1.5 bg-white/5 hover:bg-white/10 border border-white/5 rounded-lg text-xs font-medium text-slate-300 transition-all duration-200" onclick="copyToClipboard(this, '<link rel=\'stylesheet\' href=\'https://fonts.sadi.com.bd/fonts/bcc-purno/font.css\'>')">Copy</button>
-          </div>
-          <input class="w-full bg-black/20 border border-white/10 px-4 py-2.5 rounded-xl text-sm text-slate-300 focus:outline-none focus:border-indigo-400 focus:ring-1 focus:ring-indigo-400 transition-all font-mono" readonly value="<link rel='stylesheet' href='https://fonts.sadi.com.bd/fonts/bcc-purno/font.css'>">
-        </div>
+    .glass-panel {
+      position: relative;
+      z-index: 1;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      backdrop-filter: blur(14px);
+      box-shadow: 0 18px 45px rgba(15, 23, 42, 0.06);
+    }
 
-        <div class="w-full mb-8">
-          <div class="flex items-center justify-between mb-2">
-            <label class="text-[11px] font-bold text-slate-400 uppercase tracking-widest">CSS Rule</label>
-            <button class="px-3 py-1.5 bg-white/5 hover:bg-white/10 border border-white/5 rounded-lg text-xs font-medium text-slate-300 transition-all duration-200" onclick="copyToClipboard(this, 'font-family: \'BCC Purno\', sans-serif;')">Copy</button>
-          </div>
-          <input class="w-full bg-black/20 border border-white/10 px-4 py-2.5 rounded-xl text-sm text-slate-300 focus:outline-none focus:border-indigo-400 focus:ring-1 focus:ring-indigo-400 transition-all font-mono" readonly value="font-family: 'BCC Purno', sans-serif;">
-        </div>
+    .font-card {
+      border: 1px solid rgba(148, 163, 184, 0.32);
+      background: rgba(255, 255, 255, 0.82);
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+      opacity: 0;
+      animation: card-in 500ms ease forwards;
+    }
 
-        <div class="w-full mt-auto">
-          <label class="text-[11px] font-bold text-slate-400 uppercase tracking-widest mb-3 block">Live Preview</label>
-          <textarea id="preview-bcc" class="w-full bg-black/30 border border-white/10 rounded-2xl px-5 py-5 text-2xl text-center resize-none focus:outline-none focus:border-indigo-400 focus:ring-1 focus:ring-indigo-400 transition-all text-white shadow-inner" rows="3" style="font-family: 'BCC Purno', sans-serif;">বল বীর—
-বল উন্নত মম শির!</textarea>
-          
-          <div class="mt-4 grid grid-cols-4 gap-2">
-            <button onclick="applyFont('preview-bcc', 'BCC Purno', 'normal', '400')" class="py-2 bg-white/5 hover:bg-white/10 border border-white/5 text-slate-300 rounded-xl text-xs font-medium transition-all">Regular</button>
-            <button onclick="applyFont('preview-bcc', 'BCC Purno', 'italic', '400')" class="py-2 bg-white/5 hover:bg-white/10 border border-white/5 text-slate-300 rounded-xl text-xs font-medium transition-all italic">Italic</button>
-            <button onclick="applyFont('preview-bcc', 'BCC Purno', 'normal', '700')" class="py-2 bg-white/10 hover:bg-white/20 border border-white/10 text-white rounded-xl text-xs font-bold transition-all shadow-[0_0_10px_rgba(255,255,255,0.05)]">Bold</button>
-            <button onclick="applyFont('preview-bcc', 'BCC Purno', 'italic', '700')" class="py-2 bg-white/10 hover:bg-white/20 border border-white/10 text-white rounded-xl text-xs font-bold transition-all shadow-[0_0_10px_rgba(255,255,255,0.05)] italic">B. Italic</button>
-          </div>
-        </div>
-      </div>
+    .font-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(20, 184, 166, 0.35);
+      box-shadow: 0 18px 34px rgba(15, 23, 42, 0.12);
+    }
 
-      <div class="group bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-7 shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:bg-white/[0.07] hover:border-white/20 hover:shadow-[0_0_40px_-10px_rgba(236,72,153,0.3)] flex flex-col relative overflow-hidden">
-        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-500 to-pink-500 opacity-70 group-hover:opacity-100 transition-opacity"></div>
-        
-        <h2 class="text-2xl font-bold mb-6 text-white tracking-wide">Hadi</h2>
-        
-        <div class="w-full mb-5">
-          <div class="flex items-center justify-between mb-2">
-            <label class="text-[11px] font-bold text-slate-400 uppercase tracking-widest">Import CSS</label>
-            <button class="px-3 py-1.5 bg-white/5 hover:bg-white/10 border border-white/5 rounded-lg text-xs font-medium text-slate-300 transition-all duration-200" onclick="copyToClipboard(this, '@import url(\'https://fonts.sadi.com.bd/fonts/hadi/font.css\');')">Copy</button>
-          </div>
-          <input class="w-full bg-black/20 border border-white/10 px-4 py-2.5 rounded-xl text-sm text-slate-300 focus:outline-none focus:border-pink-400 focus:ring-1 focus:ring-pink-400 transition-all font-mono" readonly value="@import url('https://fonts.sadi.com.bd/fonts/hadi/font.css');">
-        </div>
+    .snippet-box {
+      border: 1px solid rgba(100, 116, 139, 0.24);
+      background: linear-gradient(165deg, #0f172a, #1e293b 65%, #0b4a6b 100%);
+      color: #e2e8f0;
+    }
 
-        <div class="w-full mb-5">
-          <div class="flex items-center justify-between mb-2">
-            <label class="text-[11px] font-bold text-slate-400 uppercase tracking-widest">Embed Link</label>
-            <button class="px-3 py-1.5 bg-white/5 hover:bg-white/10 border border-white/5 rounded-lg text-xs font-medium text-slate-300 transition-all duration-200" onclick="copyToClipboard(this, '<link rel=\'stylesheet\' href=\'https://fonts.sadi.com.bd/fonts/hadi/font.css\'>')">Copy</button>
-          </div>
-          <input class="w-full bg-black/20 border border-white/10 px-4 py-2.5 rounded-xl text-sm text-slate-300 focus:outline-none focus:border-pink-400 focus:ring-1 focus:ring-pink-400 transition-all font-mono" readonly value="<link rel='stylesheet' href='https://fonts.sadi.com.bd/fonts/hadi/font.css'>">
-        </div>
+    .copy-btn {
+      border: 1px solid rgba(100, 116, 139, 0.35);
+      background: rgba(255, 255, 255, 0.65);
+      color: #334155;
+      transition: all 0.2s ease;
+    }
 
-        <div class="w-full mb-8">
-          <div class="flex items-center justify-between mb-2">
-            <label class="text-[11px] font-bold text-slate-400 uppercase tracking-widest">CSS Rule</label>
-            <button class="px-3 py-1.5 bg-white/5 hover:bg-white/10 border border-white/5 rounded-lg text-xs font-medium text-slate-300 transition-all duration-200" onclick="copyToClipboard(this, 'font-family: \'Hadi\', sans-serif;')">Copy</button>
-          </div>
-          <input class="w-full bg-black/20 border border-white/10 px-4 py-2.5 rounded-xl text-sm text-slate-300 focus:outline-none focus:border-pink-400 focus:ring-1 focus:ring-pink-400 transition-all font-mono" readonly value="font-family: 'Hadi', sans-serif;">
-        </div>
+    .copy-btn:hover {
+      border-color: rgba(20, 184, 166, 0.65);
+      color: #0f766e;
+      background: rgba(240, 253, 250, 0.94);
+    }
 
-        <div class="w-full mt-auto">
-          <label class="text-[11px] font-bold text-slate-400 uppercase tracking-widest mb-3 block">Live Preview</label>
-          <textarea id="preview-hadi" class="w-full bg-black/30 border border-white/10 rounded-2xl px-5 py-5 text-2xl text-center resize-none focus:outline-none focus:border-pink-400 focus:ring-1 focus:ring-pink-400 transition-all text-white shadow-inner" rows="3" style="font-family: 'Hadi', sans-serif;">বল বীর—
-বল উন্নত মম শির!</textarea>
-          
-          <div class="mt-4 grid grid-cols-4 gap-2">
-            <button onclick="applyFont('preview-hadi', 'Hadi', 'normal', '400')" class="py-2 bg-white/5 hover:bg-white/10 border border-white/5 text-slate-300 rounded-xl text-xs font-medium transition-all">Regular</button>
-            <button onclick="applyFont('preview-hadi', 'Hadi', 'italic', '400')" class="py-2 bg-white/5 hover:bg-white/10 border border-white/5 text-slate-300 rounded-xl text-xs font-medium transition-all italic">Italic</button>
-            <button onclick="applyFont('preview-hadi', 'Hadi', 'normal', '700')" class="py-2 bg-white/10 hover:bg-white/20 border border-white/10 text-white rounded-xl text-xs font-bold transition-all shadow-[0_0_10px_rgba(255,255,255,0.05)]">Bold</button>
-            <button onclick="applyFont('preview-hadi', 'Hadi', 'italic', '700')" class="py-2 bg-white/10 hover:bg-white/20 border border-white/10 text-white rounded-xl text-xs font-bold transition-all shadow-[0_0_10px_rgba(255,255,255,0.05)] italic">B. Italic</button>
-          </div>
-        </div>
-      </div>
+    .copy-ok {
+      border-color: rgba(16, 185, 129, 0.65) !important;
+      color: #047857 !important;
+      background: rgba(236, 253, 245, 0.95) !important;
+    }
 
-      <div class="group bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-7 shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:bg-white/[0.07] hover:border-white/20 hover:shadow-[0_0_40px_-10px_rgba(56,189,248,0.3)] flex flex-col relative overflow-hidden">
-        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-400 to-blue-500 opacity-70 group-hover:opacity-100 transition-opacity"></div>
-        
-        <h2 class="text-2xl font-bold mb-6 text-white tracking-wide">July</h2>
-        
-        <div class="w-full mb-5">
-          <div class="flex items-center justify-between mb-2">
-            <label class="text-[11px] font-bold text-slate-400 uppercase tracking-widest">Import CSS</label>
-            <button class="px-3 py-1.5 bg-white/5 hover:bg-white/10 border border-white/5 rounded-lg text-xs font-medium text-slate-300 transition-all duration-200" onclick="copyToClipboard(this, '@import url(\'https://fonts.sadi.com.bd/fonts/july/font.css\');')">Copy</button>
-          </div>
-          <input class="w-full bg-black/20 border border-white/10 px-4 py-2.5 rounded-xl text-sm text-slate-300 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all font-mono" readonly value="@import url('https://fonts.sadi.com.bd/fonts/july/font.css');">
-        </div>
-
-        <div class="w-full mb-5">
-          <div class="flex items-center justify-between mb-2">
-            <label class="text-[11px] font-bold text-slate-400 uppercase tracking-widest">Embed Link</label>
-            <button class="px-3 py-1.5 bg-white/5 hover:bg-white/10 border border-white/5 rounded-lg text-xs font-medium text-slate-300 transition-all duration-200" onclick="copyToClipboard(this, '<link rel=\'stylesheet\' href=\'https://fonts.sadi.com.bd/fonts/july/font.css\'>')">Copy</button>
-          </div>
-          <input class="w-full bg-black/20 border border-white/10 px-4 py-2.5 rounded-xl text-sm text-slate-300 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all font-mono" readonly value="<link rel='stylesheet' href='https://fonts.sadi.com.bd/fonts/july/font.css'>">
-        </div>
-
-        <div class="w-full mb-8">
-          <div class="flex items-center justify-between mb-2">
-            <label class="text-[11px] font-bold text-slate-400 uppercase tracking-widest">CSS Rule</label>
-            <button class="px-3 py-1.5 bg-white/5 hover:bg-white/10 border border-white/5 rounded-lg text-xs font-medium text-slate-300 transition-all duration-200" onclick="copyToClipboard(this, 'font-family: \'July\', sans-serif;')">Copy</button>
-          </div>
-          <input class="w-full bg-black/20 border border-white/10 px-4 py-2.5 rounded-xl text-sm text-slate-300 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all font-mono" readonly value="font-family: 'July', sans-serif;">
-        </div>
-
-        <div class="w-full mt-auto">
-          <label class="text-[11px] font-bold text-slate-400 uppercase tracking-widest mb-3 block">Live Preview</label>
-          <textarea id="preview-july" class="w-full bg-black/30 border border-white/10 rounded-2xl px-5 py-5 text-2xl text-center resize-none focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all text-white shadow-inner" rows="3" style="font-family: 'July', sans-serif;">বল বীর—
-বল উন্নত মম শির!</textarea>
-          
-          <div class="mt-4 grid grid-cols-4 gap-2">
-            <button onclick="applyFont('preview-july', 'July', 'normal', '400')" class="py-2 bg-white/5 hover:bg-white/10 border border-white/5 text-slate-300 rounded-xl text-xs font-medium transition-all">Regular</button>
-            <button onclick="applyFont('preview-july', 'July', 'italic', '400')" class="py-2 bg-white/5 hover:bg-white/10 border border-white/5 text-slate-300 rounded-xl text-xs font-medium transition-all italic">Italic</button>
-            <button onclick="applyFont('preview-july', 'July', 'normal', '700')" class="py-2 bg-white/10 hover:bg-white/20 border border-white/10 text-white rounded-xl text-xs font-bold transition-all shadow-[0_0_10px_rgba(255,255,255,0.05)]">Bold</button>
-            <button onclick="applyFont('preview-july', 'July', 'italic', '700')" class="py-2 bg-white/10 hover:bg-white/20 border border-white/10 text-white rounded-xl text-xs font-bold transition-all shadow-[0_0_10px_rgba(255,255,255,0.05)] italic">B. Italic</button>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <footer class="mt-20 text-center text-slate-500 text-sm font-medium tracking-wide">
-      Created with ❤️ by <a href="https://web.sadi.com.bd" class="text-indigo-400 hover:text-indigo-500 transition-colors">Sadi Jubair
-    </footer>
-
-  </div>
-
-  <script>
-    // Dynamically applies the font styling
-    function applyFont(textareaId, font, style = 'normal', weight = '400') {
-      const el = document.getElementById(textareaId);
-      if (el) {
-        el.style.fontFamily = `"${font}", sans-serif`;
-        el.style.fontStyle = style;
-        el.style.fontWeight = weight;
+    @keyframes card-in {
+      from {
+        transform: translateY(14px) scale(0.98);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0) scale(1);
+        opacity: 1;
       }
     }
 
-    // Handles copying text and gives a satisfying UI response
-    function copyToClipboard(btn, text) {
-      navigator.clipboard.writeText(text).then(() => {
-        const originalText = btn.textContent;
-        
-        // Apply success styles
-        btn.classList.add('copy-success');
-        btn.textContent = 'Copied!';
-        
-        // Revert back after 1.5s
-        setTimeout(() => {
-          btn.classList.remove('copy-success');
-          btn.textContent = originalText;
-        }, 1500);
-      }).catch(err => {
-        console.error('Failed to copy!', err);
-      });
+    @media (max-width: 640px) {
+      .orb-a,
+      .orb-b {
+        width: 130px;
+        height: 130px;
+        filter: blur(34px);
+      }
     }
+  </style>
+</head>
+<body class="min-h-screen antialiased">
+  <main class="relative mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+    <div class="mesh"></div>
+    <div class="orb orb-a"></div>
+    <div class="orb orb-b"></div>
+
+    <header class="glass-panel mb-7 overflow-hidden rounded-3xl p-6 sm:p-8">
+      <span class="inline-flex items-center rounded-full bg-teal-100 px-3 py-1 text-xs font-semibold tracking-wide text-teal-700">Font Registry by Sadi Jubair</span>
+      <h1 class="mt-4 text-3xl font-bold leading-tight sm:text-5xl">Bangla Web Fonts </h1>
+      <p class="mt-3 max-w-3xl text-sm text-slate-600 sm:text-base">
+        Import and preview beautiful Bangla typography. Copy the CSS links or embed codes instantly for your next modern web project.
+      </p>
+      <div class="mt-5 flex flex-wrap gap-2 text-xs text-slate-600">
+        <span class="rounded-full bg-white/70 px-3 py-1 ring-1 ring-slate-300">Import in CSS</span>
+        <span class="rounded-full bg-white/70 px-3 py-1 ring-1 ring-slate-300">Direct Link</span>
+        <span class="rounded-full bg-white/70 px-3 py-1 ring-1 ring-slate-300">100% Uptime</span>
+      </div>
+    </header>
+
+    <section class="glass-panel mb-6 grid gap-4 rounded-2xl p-4 md:grid-cols-2 md:p-5">
+      <label class="block">
+        <span class="mb-2 block text-sm font-medium text-slate-700">Search fonts</span>
+        <input
+          id="searchInput"
+          type="search"
+          placeholder="Search by name"
+          class="w-full rounded-xl border border-slate-300/80 bg-white/90 px-4 py-2.5 text-sm outline-none ring-teal-500 transition focus:border-teal-500 focus:ring-2"
+        >
+      </label>
+
+      <label class="block">
+        <span class="mb-2 block text-sm font-medium text-slate-700">Live preview text</span>
+        <input
+          id="previewInput"
+          type="text"
+          value="আমি বাংলায় গান গাই"
+          class="w-full rounded-xl border border-slate-300/80 bg-white/90 px-4 py-2.5 text-sm outline-none ring-teal-500 transition focus:border-teal-500 focus:ring-2"
+        >
+      </label>
+    </section>
+
+    <p id="status" class="mb-4 inline-flex rounded-full bg-white/80 px-3 py-1 text-xs font-medium text-slate-600 ring-1 ring-slate-300">Loading font registry...</p>
+
+    <section id="cards" class="grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-3"></section>
+
+    <template id="fontCardTemplate">
+      <article class="font-card rounded-3xl p-5">
+        <div class="mb-4">
+          <div>
+            <h2 data-name class="text-xl font-semibold text-slate-900 sm:text-2xl"></h2>
+            <p data-slug class="text-xs text-slate-500"></p>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <div class="mb-1 flex items-center justify-between gap-2">
+            <p class="text-xs font-medium uppercase tracking-wide text-slate-500">IMPORT CSS</p>
+            <button
+              type="button"
+              data-copy
+              data-copy-import
+              class="copy-btn rounded-lg px-3 py-1.5 text-xs font-semibold"
+            >
+              Copy
+            </button>
+          </div>
+          <code data-snippet-import class="snippet-box block rounded-xl px-3 py-2 text-xs leading-relaxed break-all"></code>
+        </div>
+
+        <div class="mb-3">
+          <div class="mb-1 flex items-center justify-between gap-2">
+            <p class="text-xs font-medium uppercase tracking-wide text-slate-500">EMBED LINK</p>
+            <button
+              type="button"
+              data-copy
+              data-copy-embed
+              class="copy-btn rounded-lg px-3 py-1.5 text-xs font-semibold"
+            >
+              Copy
+            </button>
+          </div>
+          <code data-snippet-embed class="snippet-box block rounded-xl px-3 py-2 text-xs leading-relaxed break-all"></code>
+        </div>
+
+        <div class="mb-4">
+          <div class="mb-1 flex items-center justify-between gap-2">
+            <p class="text-xs font-medium uppercase tracking-wide text-slate-500">CSS RULE</p>
+            <button
+              type="button"
+              data-copy
+              data-copy-css-rule
+              class="copy-btn rounded-lg px-3 py-1.5 text-xs font-semibold"
+            >
+              Copy
+            </button>
+          </div>
+          <code data-snippet-css-rule class="snippet-box block rounded-xl px-3 py-2 text-xs leading-relaxed break-all"></code>
+        </div>
+
+        <p class="text-xs font-medium uppercase tracking-wide text-slate-500">Preview</p>
+        <p data-preview class="mt-2 min-h-24 rounded-2xl border border-slate-200 bg-white/80 p-3 text-2xl leading-relaxed text-slate-900 shadow-inner"></p>
+      </article>
+    </template>
+
+    <footer class="mt-12 pb-5 text-center text-sm text-slate-600">
+      Created with ❤️ by <a href="https://sadi.com.bd" target="_blank" rel="noreferrer">Sadi Jubair</a>
+    </footer>
+  </main>
+
+  <script type="module">
+    const REGISTRY_ENDPOINTS = ["/data/fonts.json", "./data/fonts.json"];
+    const FONT_CSS_BASE = "/fonts";
+    const CDN_BASE = "https://fonts.sadi.com.bd/fonts";
+    const DEFAULT_PREVIEW_TEXT = "আমার সোনার বাংলা, আমি তোমায় ভালোবাসি";
+
+    const state = {
+      fonts: [],
+      query: "",
+      previewText: DEFAULT_PREVIEW_TEXT,
+    };
+
+    const nodes = {
+      cards: document.getElementById("cards"),
+      status: document.getElementById("status"),
+      search: document.getElementById("searchInput"),
+      previewInput: document.getElementById("previewInput"),
+      template: document.getElementById("fontCardTemplate"),
+    };
+
+    const fontFamilyPromises = new Map();
+    let observer;
+
+    function toTitleCaseFromSlug(slug) {
+      return slug
+        .split(/[-_\s]+/)
+        .filter(Boolean)
+        .map((part) => part.charAt(0).toUpperCase() + part.slice(1).toLowerCase())
+        .join(" ");
+    }
+
+    function buildSnippets(slug, fontFamily) {
+      const cssUrl = `${CDN_BASE}/${slug}/font.css`;
+      const safeFamily = String(fontFamily).replace(/'/g, "\\'");
+
+      return {
+        importCss: `@import url('${cssUrl}');`,
+        embedLink: `<link rel='stylesheet' href='${cssUrl}'>`,
+        cssRule: `font-family: '${safeFamily}', sans-serif;`,
+      };
+    }
+
+    function sanitizeRegistry(registry) {
+      if (!Array.isArray(registry)) {
+        return [];
+      }
+
+      return registry
+        .filter((item) => item && typeof item.slug === "string")
+        .map((item) => {
+          const slug = item.slug.trim();
+          const name = typeof item.name === "string" && item.name.trim()
+            ? item.name.trim()
+            : toTitleCaseFromSlug(slug);
+          return { name, slug };
+        })
+        .filter((item) => item.slug.length > 0)
+        .sort((a, b) => a.slug.localeCompare(b.slug));
+    }
+
+    async function fetchRegistry() {
+      let lastError = new Error("fonts.json could not be fetched.");
+
+      for (const endpoint of REGISTRY_ENDPOINTS) {
+        try {
+          const response = await fetch(endpoint, { cache: "no-store" });
+          if (!response.ok) {
+            throw new Error(`Failed ${endpoint} with status ${response.status}`);
+          }
+          const data = await response.json();
+          return sanitizeRegistry(data);
+        } catch (error) {
+          lastError = error;
+        }
+      }
+
+      throw lastError;
+    }
+
+    function extractFontFamily(link, fallbackName) {
+      try {
+        const rules = Array.from(link.sheet?.cssRules || []);
+        for (const rule of rules) {
+          if (!rule || !rule.style) {
+            continue;
+          }
+          const family = rule.style.getPropertyValue("font-family");
+          if (family) {
+            return family.replace(/["']/g, "").trim();
+          }
+        }
+      } catch {
+      }
+      return fallbackName;
+    }
+
+    function ensureFontFamily(font) {
+      if (fontFamilyPromises.has(font.slug)) {
+        return fontFamilyPromises.get(font.slug);
+      }
+
+      const promise = new Promise((resolve) => {
+        const link = document.createElement("link");
+        link.rel = "stylesheet";
+        link.href = `${FONT_CSS_BASE}/${encodeURIComponent(font.slug)}/font.css`;
+        link.dataset.slug = font.slug;
+
+        link.onload = () => resolve(extractFontFamily(link, font.name));
+        link.onerror = () => resolve(font.name);
+
+        document.head.appendChild(link);
+      });
+
+      fontFamilyPromises.set(font.slug, promise);
+      return promise;
+    }
+
+    function createCard(font) {
+      const fragment = nodes.template.content.cloneNode(true);
+      const card = fragment.querySelector("article");
+      const nameNode = fragment.querySelector("[data-name]");
+      const slugNode = fragment.querySelector("[data-slug]");
+      const importSnippetNode = fragment.querySelector("[data-snippet-import]");
+      const embedSnippetNode = fragment.querySelector("[data-snippet-embed]");
+      const cssRuleSnippetNode = fragment.querySelector("[data-snippet-css-rule]");
+      const previewNode = fragment.querySelector("[data-preview]");
+      const importCopyButton = fragment.querySelector("[data-copy-import]");
+      const embedCopyButton = fragment.querySelector("[data-copy-embed]");
+      const cssRuleCopyButton = fragment.querySelector("[data-copy-css-rule]");
+
+      const snippets = buildSnippets(font.slug, font.name);
+
+      card.dataset.slug = font.slug;
+      card.dataset.name = font.name;
+      nameNode.textContent = font.name;
+      slugNode.textContent = `/${font.slug}`;
+      importSnippetNode.textContent = snippets.importCss;
+      embedSnippetNode.textContent = snippets.embedLink;
+      cssRuleSnippetNode.textContent = snippets.cssRule;
+      previewNode.textContent = state.previewText;
+      importCopyButton.dataset.snippet = snippets.importCss;
+      embedCopyButton.dataset.snippet = snippets.embedLink;
+      cssRuleCopyButton.dataset.snippet = snippets.cssRule;
+
+      return card;
+    }
+
+    function renderFonts(fonts) {
+      nodes.cards.innerHTML = "";
+
+      if (fonts.length === 0) {
+        nodes.status.textContent = state.fonts.length === 0
+          ? "No fonts found in registry."
+          : "No fonts match the current search.";
+        return;
+      }
+
+      const fragment = document.createDocumentFragment();
+      let index = 0;
+      for (const font of fonts) {
+        const card = createCard(font);
+        card.style.animationDelay = `${Math.min(index * 60, 420)}ms`;
+        index += 1;
+        fragment.appendChild(card);
+      }
+      nodes.cards.appendChild(fragment);
+
+      nodes.status.textContent = `${fonts.length} font${fonts.length === 1 ? "" : "s"} shown`;
+
+      for (const card of nodes.cards.querySelectorAll("article[data-slug]")) {
+        observer.observe(card);
+      }
+    }
+
+    function applyFilters() {
+      const query = state.query.trim().toLowerCase();
+
+      if (!query) {
+        renderFonts(state.fonts);
+        return;
+      }
+
+      const filtered = state.fonts.filter((font) => {
+        return font.name.toLowerCase().includes(query) || font.slug.toLowerCase().includes(query);
+      });
+
+      renderFonts(filtered);
+    }
+
+    async function copyToClipboard(text, button) {
+      try {
+        await navigator.clipboard.writeText(text);
+      } catch {
+        const textarea = document.createElement("textarea");
+        textarea.value = text;
+        textarea.setAttribute("readonly", "");
+        textarea.style.position = "absolute";
+        textarea.style.left = "-9999px";
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand("copy");
+        textarea.remove();
+      }
+
+      const previousText = button.textContent;
+      button.textContent = "Copied";
+      button.classList.add("copy-ok");
+
+      window.setTimeout(() => {
+        button.textContent = previousText;
+        button.classList.remove("copy-ok");
+      }, 1200);
+    }
+
+    function initObserver() {
+      observer = new IntersectionObserver(
+        async (entries) => {
+          for (const entry of entries) {
+            if (!entry.isIntersecting) {
+              continue;
+            }
+
+            const card = entry.target;
+            observer.unobserve(card);
+
+            const slug = card.dataset.slug;
+            const name = card.dataset.name;
+            const previewNode = card.querySelector("[data-preview]");
+            const cssRuleSnippetNode = card.querySelector("[data-snippet-css-rule]");
+            const cssRuleCopyButton = card.querySelector("[data-copy-css-rule]");
+
+            const family = await ensureFontFamily({ slug, name });
+            const snippets = buildSnippets(slug, family);
+
+            previewNode.style.fontFamily = `"${family}", "${name}", sans-serif`;
+            cssRuleSnippetNode.textContent = snippets.cssRule;
+            cssRuleCopyButton.dataset.snippet = snippets.cssRule;
+          }
+        },
+        { rootMargin: "180px 0px" }
+      );
+    }
+
+    async function init() {
+      try {
+        nodes.previewInput.value = DEFAULT_PREVIEW_TEXT;
+        initObserver();
+
+        state.fonts = await fetchRegistry();
+        renderFonts(state.fonts);
+      } catch (error) {
+        nodes.status.textContent = "Font registry is missing. Run the fonts workflow to generate /data/fonts.json.";
+        nodes.cards.innerHTML = "";
+        console.error(error);
+      }
+    }
+
+    nodes.search.addEventListener("input", (event) => {
+      state.query = event.target.value;
+      applyFilters();
+    });
+
+    nodes.previewInput.addEventListener("input", (event) => {
+      const value = event.target.value.trim();
+      state.previewText = value || DEFAULT_PREVIEW_TEXT;
+
+      for (const previewNode of nodes.cards.querySelectorAll("[data-preview]")) {
+        previewNode.textContent = state.previewText;
+      }
+    });
+
+    nodes.cards.addEventListener("click", async (event) => {
+      const button = event.target.closest("[data-copy]");
+      if (!button) {
+        return;
+      }
+
+      await copyToClipboard(button.dataset.snippet, button);
+    });
+
+    init();
   </script>
 </body>
 </html>

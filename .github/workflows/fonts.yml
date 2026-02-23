@@ -1,0 +1,67 @@
+name: Generate Font Registry
+
+on:
+  push:
+    paths:
+      - "fonts/**"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-font-registry:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Generate data/fonts.json
+        shell: bash
+        run: |
+          node <<'NODE'
+          const fs = require('fs');
+          const path = require('path');
+
+          const root = process.cwd();
+          const fontsDir = path.join(root, 'fonts');
+          const dataDir = path.join(root, 'data');
+          const outputFile = path.join(dataDir, 'fonts.json');
+
+          const toTitleCase = (slug) =>
+            slug
+              .split(/[-_\s]+/)
+              .filter(Boolean)
+              .map((part) => part.charAt(0).toUpperCase() + part.slice(1).toLowerCase())
+              .join(' ');
+
+          const fonts = fs.existsSync(fontsDir)
+            ? fs
+                .readdirSync(fontsDir, { withFileTypes: true })
+                .filter((entry) => entry.isDirectory())
+                .map((entry) => entry.name)
+                .sort((a, b) => a.localeCompare(b))
+                .map((slug) => ({
+                  name: toTitleCase(slug),
+                  slug,
+                }))
+            : [];
+
+          fs.mkdirSync(dataDir, { recursive: true });
+          fs.writeFileSync(outputFile, `${JSON.stringify(fonts, null, 2)}\n`, 'utf8');
+          NODE
+
+      - name: Commit and push registry changes
+        shell: bash
+        run: |
+          if [ -z "$(git status --porcelain -- data/fonts.json)" ]; then
+            echo "No changes to commit."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/fonts.json
+          git commit -m "chore: update font registry"
+          git push
