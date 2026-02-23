@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fonts.sadi.com.bd/sitemap.xml
+Host: fonts.sadi.com.bd

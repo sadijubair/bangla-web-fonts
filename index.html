@@ -1,12 +1,70 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-BD">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bangla Web Fonts CDN | Sadi Jubair</title>
+  <meta name="description" content="Discover and preview free Bangla web fonts from a public CDN. Copy @import, link tag, and CSS font-family snippets instantly.">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="Sadi Jubair">
+  <meta name="theme-color" content="#0f172a">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="canonical" href="https://fonts.sadi.com.bd/">
+  <link rel="alternate" hreflang="en" href="https://fonts.sadi.com.bd/">
+  <link rel="alternate" hreflang="x-default" href="https://fonts.sadi.com.bd/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://fonts.sadi.com.bd/">
+  <meta property="og:site_name" content="Bangla Web Fonts CDN">
+  <meta property="og:title" content="Bangla Web Fonts CDN | Sadi Jubair">
+  <meta property="og:description" content="Discover and preview free Bangla web fonts from a public CDN. Copy @import, link tag, and CSS snippets instantly.">
+  <meta property="og:image" content="https://fonts.sadi.com.bd/og-image.svg">
+  <meta property="og:image:alt" content="Bangla Web Fonts CDN catalog preview">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Bangla Web Fonts CDN | Sadi Jubair">
+  <meta name="twitter:description" content="Discover and preview free Bangla web fonts from a public CDN. Copy @import, link tag, and CSS snippets instantly.">
+  <meta name="twitter:image" content="https://fonts.sadi.com.bd/og-image.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <script type="application/ld+json" id="primary-schema">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://fonts.sadi.com.bd/#website",
+          "url": "https://fonts.sadi.com.bd/",
+          "name": "Bangla Web Fonts CDN",
+          "description": "Free Bangla web font catalog with CDN usage snippets and live previews.",
+          "inLanguage": ["en", "bn"],
+          "publisher": {
+            "@id": "https://fonts.sadi.com.bd/#organization"
+          }
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://fonts.sadi.com.bd/#organization",
+          "name": "Sadi Jubair",
+          "url": "https://sadi.com.bd/"
+        },
+        {
+          "@type": "CollectionPage",
+          "@id": "https://fonts.sadi.com.bd/#catalog",
+          "url": "https://fonts.sadi.com.bd/",
+          "name": "Bangla Web Fonts Catalog",
+          "isPartOf": {
+            "@id": "https://fonts.sadi.com.bd/#website"
+          },
+          "about": "Bangla web fonts",
+          "inLanguage": "en"
+        }
+      ]
+    }
+  </script>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     :root {
@@ -138,14 +196,15 @@
   </style>
 </head>
 <body class="min-h-screen antialiased">
-  <main class="relative mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-white focus:px-3 focus:py-2 focus:text-sm focus:text-slate-900">Skip to main content</a>
+  <main id="main-content" class="relative mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
     <div class="mesh"></div>
     <div class="orb orb-a"></div>
     <div class="orb orb-b"></div>
 
     <header class="glass-panel mb-7 overflow-hidden rounded-3xl p-6 sm:p-8">
-      <span class="inline-flex items-center rounded-full bg-teal-100 px-3 py-1 text-xs font-semibold tracking-wide text-teal-700">Font Registry by Sadi Jubair</span>
-      <h1 class="mt-4 text-3xl font-bold leading-tight sm:text-5xl">Bangla Web Fonts </h1>
+      <span class="inline-flex items-center rounded-full bg-teal-100 px-3 py-1 text-xs font-semibold tracking-wide text-teal-700">Bangla Font Registry by Sadi Jubair</span>
+      <h1 class="mt-4 text-3xl font-bold leading-tight sm:text-5xl">Bangla Web Fonts</h1>
       <p class="mt-3 max-w-3xl text-sm text-slate-600 sm:text-base">
         Import and preview beautiful Bangla typography. Copy the CSS links or embed codes instantly for your next modern web project.
       </p>
@@ -163,6 +222,8 @@
           id="searchInput"
           type="search"
           placeholder="Search by name"
+          name="font-search"
+          autocomplete="off"
           class="w-full rounded-xl border border-slate-300/80 bg-white/90 px-4 py-2.5 text-sm outline-none ring-teal-500 transition focus:border-teal-500 focus:ring-2"
         >
       </label>
@@ -172,18 +233,25 @@
         <input
           id="previewInput"
           type="text"
-          value="আমি বাংলায় গান গাই"
+          value="I love Bangla typography"
+          name="preview-text"
           class="w-full rounded-xl border border-slate-300/80 bg-white/90 px-4 py-2.5 text-sm outline-none ring-teal-500 transition focus:border-teal-500 focus:ring-2"
         >
       </label>
     </section>
 
-    <p id="status" class="mb-4 inline-flex rounded-full bg-white/80 px-3 py-1 text-xs font-medium text-slate-600 ring-1 ring-slate-300">Loading font registry...</p>
+    <noscript>
+      <section class="glass-panel mb-6 rounded-2xl p-4 text-sm text-slate-700">
+        This catalog uses JavaScript to render font cards. You can still access the registry at <a class="font-semibold underline" href="/data/fonts.json">/data/fonts.json</a>.
+      </section>
+    </noscript>
 
-    <section id="cards" class="grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-3"></section>
+    <p id="status" aria-live="polite" class="mb-4 inline-flex rounded-full bg-white/80 px-3 py-1 text-xs font-medium text-slate-600 ring-1 ring-slate-300">Loading font registry...</p>
+
+    <section id="cards" role="list" class="grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-3"></section>
 
     <template id="fontCardTemplate">
-      <article class="font-card rounded-3xl p-5">
+      <article class="font-card rounded-3xl p-5" role="listitem">
         <div class="mb-4">
           <div>
             <h2 data-name class="text-xl font-semibold text-slate-900 sm:text-2xl"></h2>
@@ -242,15 +310,19 @@
     </template>
 
     <footer class="mt-12 pb-5 text-center text-sm text-slate-600">
-      Created with ❤️ by <a href="https://sadi.com.bd" target="_blank" rel="noreferrer">Sadi Jubair</a>
+      Created with ❤️ by <a href="https://sadi.com.bd" target="_blank" rel="noopener noreferrer">Sadi Jubair</a>
     </footer>
   </main>
 
   <script type="module">
+    const SITE_URL = "https://fonts.sadi.com.bd/";
+    const SITE_NAME = "Bangla Web Fonts CDN";
+    const BASE_TITLE = "Bangla Web Fonts CDN | Sadi Jubair";
+    const BASE_DESCRIPTION = "Discover and preview free Bangla web fonts from a public CDN. Copy @import, link tag, and CSS font-family snippets instantly.";
     const REGISTRY_ENDPOINTS = ["/data/fonts.json", "./data/fonts.json"];
     const FONT_CSS_BASE = "/fonts";
     const CDN_BASE = "https://fonts.sadi.com.bd/fonts";
-    const DEFAULT_PREVIEW_TEXT = "আমার সোনার বাংলা, আমি তোমায় ভালোবাসি";
+    const DEFAULT_PREVIEW_TEXT = "I love Bangla typography";
 
     const state = {
       fonts: [],
@@ -286,6 +358,58 @@
         embedLink: `<link rel='stylesheet' href='${cssUrl}'>`,
         cssRule: `font-family: '${safeFamily}', sans-serif;`,
       };
+    }
+
+    function slugToFragment(slug) {
+      return `font-${slug.replace(/[^a-z0-9-]/gi, "-").toLowerCase()}`;
+    }
+
+    function setMetaContent(selector, content) {
+      const element = document.querySelector(selector);
+      if (element) {
+        element.setAttribute("content", content);
+      }
+    }
+
+    function updateSeo(fonts) {
+      const count = fonts.length;
+      const dynamicTitle = BASE_TITLE;
+      const dynamicDescription = count > 0
+        ? `Browse ${count} free Bangla web fonts from a public CDN. Copy @import, link tag, and CSS font-family snippets instantly.`
+        : BASE_DESCRIPTION;
+
+      document.title = dynamicTitle;
+      setMetaContent('meta[name="description"]', dynamicDescription);
+      setMetaContent('meta[property="og:title"]', dynamicTitle);
+      setMetaContent('meta[property="og:description"]', dynamicDescription);
+      setMetaContent('meta[name="twitter:title"]', dynamicTitle);
+      setMetaContent('meta[name="twitter:description"]', dynamicDescription);
+    }
+
+    function updateDynamicSchema(fonts) {
+      const itemList = {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "Bangla Web Fonts",
+        "url": SITE_URL,
+        "numberOfItems": fonts.length,
+        "itemListElement": fonts.map((font, index) => ({
+          "@type": "ListItem",
+          "position": index + 1,
+          "name": font.name,
+          "url": `${SITE_URL}#${slugToFragment(font.slug)}`
+        }))
+      };
+
+      let schemaNode = document.getElementById("font-list-schema");
+      if (!schemaNode) {
+        schemaNode = document.createElement("script");
+        schemaNode.type = "application/ld+json";
+        schemaNode.id = "font-list-schema";
+        document.head.appendChild(schemaNode);
+      }
+
+      schemaNode.textContent = JSON.stringify(itemList);
     }
 
     function sanitizeRegistry(registry) {
@@ -377,9 +501,14 @@
       const cssRuleCopyButton = fragment.querySelector("[data-copy-css-rule]");
 
       const snippets = buildSnippets(font.slug, font.name);
+      const cardId = slugToFragment(font.slug);
+      const headingId = `${cardId}-name`;
 
       card.dataset.slug = font.slug;
       card.dataset.name = font.name;
+      card.id = cardId;
+      card.setAttribute("aria-labelledby", headingId);
+      nameNode.id = headingId;
       nameNode.textContent = font.name;
       slugNode.textContent = `/${font.slug}`;
       importSnippetNode.textContent = snippets.importCss;
@@ -433,6 +562,16 @@
       });
 
       renderFonts(filtered);
+    }
+
+    function syncSearchParam(value) {
+      const url = new URL(window.location.href);
+      if (value && value.trim()) {
+        url.searchParams.set("q", value.trim());
+      } else {
+        url.searchParams.delete("q");
+      }
+      window.history.replaceState({}, "", url);
     }
 
     async function copyToClipboard(text, button) {
@@ -494,9 +633,23 @@
         nodes.previewInput.value = DEFAULT_PREVIEW_TEXT;
         initObserver();
 
+        const queryFromUrl = new URLSearchParams(window.location.search).get("q");
+        if (queryFromUrl) {
+          state.query = queryFromUrl;
+          nodes.search.value = queryFromUrl;
+        }
+
         state.fonts = await fetchRegistry();
-        renderFonts(state.fonts);
+        updateSeo(state.fonts);
+        updateDynamicSchema(state.fonts);
+
+        if (state.query) {
+          applyFilters();
+        } else {
+          renderFonts(state.fonts);
+        }
       } catch (error) {
+        updateSeo([]);
         nodes.status.textContent = "Font registry is missing. Run the fonts workflow to generate /data/fonts.json.";
         nodes.cards.innerHTML = "";
         console.error(error);
@@ -505,6 +658,7 @@
 
     nodes.search.addEventListener("input", (event) => {
       state.query = event.target.value;
+      syncSearchParam(state.query);
       applyFilters();
     });
 
