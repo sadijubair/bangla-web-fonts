@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bangla Web Fonts CDN</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Rich Animated Background & Custom Scrollbar */
+    body {
+      background-color: #0f172a; /* Slate 900 */
+      color: #f8fafc;
+      overflow-x: hidden;
+    }
+    
+    /* Animated glowing orbs in the background */
+    .bg-orb {
+      position: fixed;
+      border-radius: 50%;
+      filter: blur(100px);
+      z-index: -1;
+      animation: float 12s infinite ease-in-out alternate;
+    }
+    .orb-1 {
+      width: 500px; height: 500px;
+      background: rgba(99, 102, 241, 0.25); /* Indigo */
+      top: -150px; left: -150px;
+    }
+    .orb-2 {
+      width: 400px; height: 400px;
+      background: rgba(236, 72, 153, 0.2); /* Pink */
+      bottom: -100px; right: -100px;
+      animation-delay: -6s;
+    }
+    
+    @keyframes float {
+      0% { transform: translate(0, 0) scale(1); }
+      100% { transform: translate(40px, 60px) scale(1.1); }
+    }
+
+    /* Custom scrollbar for textareas */
+    textarea::-webkit-scrollbar {
+      width: 6px;
+    }
+    textarea::-webkit-scrollbar-thumb {
+      background-color: rgba(255, 255, 255, 0.2);
+      border-radius: 4px;
+    }
+    
+    /* Smooth CSS transitions for the JS copy effect */
+    .copy-success {
+      background-color: rgba(16, 185, 129, 0.2) !important;
+      color: #34d399 !important;
+      border-color: rgba(16, 185, 129, 0.5) !important;
+      box-shadow: 0 0 15px rgba(16, 185, 129, 0.2);
+    }
+  </style>
+</head>
+<body class="min-h-screen font-sans antialiased relative selection:bg-indigo-500/30">
+  
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
+
+  <div class="container mx-auto px-4 py-16 max-w-7xl relative z-10">
+    
+    <header class="mb-16 text-center">
+      <h1 class="text-5xl md:text-6xl font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 tracking-tight drop-shadow-sm">
+        Bangla Web Fonts
+      </h1>
+      <p class="text-lg text-slate-300 max-w-2xl mx-auto font-light leading-relaxed">
+        Import and preview beautiful Bangla typography. Copy the CSS links or embed codes instantly for your next modern web project.
+      </p>
+    </header>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      
+      <div class="group bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-7 shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:bg-white/[0.07] hover:border-white/20 hover:shadow-[0_0_40px_-10px_rgba(99,102,241,0.3)] flex flex-col relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-indigo-500 to-purple-500 opacity-70 group-hover:opacity-100 transition-opacity"></div>
+        
+        <h2 class="text-2xl font-bold mb-6 text-white tracking-wide">BCC Purno</h2>
+        
+        <div class="w-full mb-5">
+          <div class="flex items-center justify-between mb-2">
+            <label class="text-[11px] font-bold text-slate-400 uppercase tracking-widest">Import CSS</label>
+            <button class="px-3 py-1.5 bg-white/5 hover:bg-white/10 border border-white/5 rounded-lg text-xs font-medium text-slate-300 transition-all duration-200" onclick="copyToClipboard(this, '@import url(\'https://fonts.sadi.com.bd/fonts/bcc-purno/font.css\');')">Copy</button>
+          </div>
+          <input class="w-full bg-black/20 border border-white/10 px-4 py-2.5 rounded-xl text-sm text-slate-300 focus:outline-none focus:border-indigo-400 focus:ring-1 focus:ring-indigo-400 transition-all font-mono" readonly value="@import url('https://fonts.sadi.com.bd/fonts/bcc-purno/font.css');">
+        </div>
+
+        <div class="w-full mb-5">
+          <div class="flex items-center justify-between mb-2">
+            <label class="text-[11px] font-bold text-slate-400 uppercase tracking-widest">Embed Link</label>
+            <button class="px-3 py-1.5 bg-white/5 hover:bg-white/10 border border-white/5 rounded-lg text-xs font-medium text-slate-300 transition-all duration-200" onclick="copyToClipboard(this, '<link rel=\'stylesheet\' href=\'https://fonts.sadi.com.bd/fonts/bcc-purno/font.css\'>')">Copy</button>
+          </div>
+          <input class="w-full bg-black/20 border border-white/10 px-4 py-2.5 rounded-xl text-sm text-slate-300 focus:outline-none focus:border-indigo-400 focus:ring-1 focus:ring-indigo-400 transition-all font-mono" readonly value="<link rel='stylesheet' href='https://fonts.sadi.com.bd/fonts/bcc-purno/font.css'>">
+        </div>
+
+        <div class="w-full mb-8">
+          <div class="flex items-center justify-between mb-2">
+            <label class="text-[11px] font-bold text-slate-400 uppercase tracking-widest">CSS Rule</label>
+            <button class="px-3 py-1.5 bg-white/5 hover:bg-white/10 border border-white/5 rounded-lg text-xs font-medium text-slate-300 transition-all duration-200" onclick="copyToClipboard(this, 'font-family: \'BCC Purno\', sans-serif;')">Copy</button>
+          </div>
+          <input class="w-full bg-black/20 border border-white/10 px-4 py-2.5 rounded-xl text-sm text-slate-300 focus:outline-none focus:border-indigo-400 focus:ring-1 focus:ring-indigo-400 transition-all font-mono" readonly value="font-family: 'BCC Purno', sans-serif;">
+        </div>
+
+        <div class="w-full mt-auto">
+          <label class="text-[11px] font-bold text-slate-400 uppercase tracking-widest mb-3 block">Live Preview</label>
+          <textarea id="preview-bcc" class="w-full bg-black/30 border border-white/10 rounded-2xl px-5 py-5 text-2xl text-center resize-none focus:outline-none focus:border-indigo-400 focus:ring-1 focus:ring-indigo-400 transition-all text-white shadow-inner" rows="3" style="font-family: 'BCC Purno', sans-serif;">বল বীর—
+বল উন্নত মম শির!</textarea>
+          
+          <div class="mt-4 grid grid-cols-4 gap-2">
+            <button onclick="applyFont('preview-bcc', 'BCC Purno', 'normal', '400')" class="py-2 bg-white/5 hover:bg-white/10 border border-white/5 text-slate-300 rounded-xl text-xs font-medium transition-all">Regular</button>
+            <button onclick="applyFont('preview-bcc', 'BCC Purno', 'italic', '400')" class="py-2 bg-white/5 hover:bg-white/10 border border-white/5 text-slate-300 rounded-xl text-xs font-medium transition-all italic">Italic</button>
+            <button onclick="applyFont('preview-bcc', 'BCC Purno', 'normal', '700')" class="py-2 bg-white/10 hover:bg-white/20 border border-white/10 text-white rounded-xl text-xs font-bold transition-all shadow-[0_0_10px_rgba(255,255,255,0.05)]">Bold</button>
+            <button onclick="applyFont('preview-bcc', 'BCC Purno', 'italic', '700')" class="py-2 bg-white/10 hover:bg-white/20 border border-white/10 text-white rounded-xl text-xs font-bold transition-all shadow-[0_0_10px_rgba(255,255,255,0.05)] italic">B. Italic</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="group bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-7 shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:bg-white/[0.07] hover:border-white/20 hover:shadow-[0_0_40px_-10px_rgba(236,72,153,0.3)] flex flex-col relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-500 to-pink-500 opacity-70 group-hover:opacity-100 transition-opacity"></div>
+        
+        <h2 class="text-2xl font-bold mb-6 text-white tracking-wide">Hadi</h2>
+        
+        <div class="w-full mb-5">
+          <div class="flex items-center justify-between mb-2">
+            <label class="text-[11px] font-bold text-slate-400 uppercase tracking-widest">Import CSS</label>
+            <button class="px-3 py-1.5 bg-white/5 hover:bg-white/10 border border-white/5 rounded-lg text-xs font-medium text-slate-300 transition-all duration-200" onclick="copyToClipboard(this, '@import url(\'https://fonts.sadi.com.bd/fonts/hadi/font.css\');')">Copy</button>
+          </div>
+          <input class="w-full bg-black/20 border border-white/10 px-4 py-2.5 rounded-xl text-sm text-slate-300 focus:outline-none focus:border-pink-400 focus:ring-1 focus:ring-pink-400 transition-all font-mono" readonly value="@import url('https://fonts.sadi.com.bd/fonts/hadi/font.css');">
+        </div>
+
+        <div class="w-full mb-5">
+          <div class="flex items-center justify-between mb-2">
+            <label class="text-[11px] font-bold text-slate-400 uppercase tracking-widest">Embed Link</label>
+            <button class="px-3 py-1.5 bg-white/5 hover:bg-white/10 border border-white/5 rounded-lg text-xs font-medium text-slate-300 transition-all duration-200" onclick="copyToClipboard(this, '<link rel=\'stylesheet\' href=\'https://fonts.sadi.com.bd/fonts/hadi/font.css\'>')">Copy</button>
+          </div>
+          <input class="w-full bg-black/20 border border-white/10 px-4 py-2.5 rounded-xl text-sm text-slate-300 focus:outline-none focus:border-pink-400 focus:ring-1 focus:ring-pink-400 transition-all font-mono" readonly value="<link rel='stylesheet' href='https://fonts.sadi.com.bd/fonts/hadi/font.css'>">
+        </div>
+
+        <div class="w-full mb-8">
+          <div class="flex items-center justify-between mb-2">
+            <label class="text-[11px] font-bold text-slate-400 uppercase tracking-widest">CSS Rule</label>
+            <button class="px-3 py-1.5 bg-white/5 hover:bg-white/10 border border-white/5 rounded-lg text-xs font-medium text-slate-300 transition-all duration-200" onclick="copyToClipboard(this, 'font-family: \'Hadi\', sans-serif;')">Copy</button>
+          </div>
+          <input class="w-full bg-black/20 border border-white/10 px-4 py-2.5 rounded-xl text-sm text-slate-300 focus:outline-none focus:border-pink-400 focus:ring-1 focus:ring-pink-400 transition-all font-mono" readonly value="font-family: 'Hadi', sans-serif;">
+        </div>
+
+        <div class="w-full mt-auto">
+          <label class="text-[11px] font-bold text-slate-400 uppercase tracking-widest mb-3 block">Live Preview</label>
+          <textarea id="preview-hadi" class="w-full bg-black/30 border border-white/10 rounded-2xl px-5 py-5 text-2xl text-center resize-none focus:outline-none focus:border-pink-400 focus:ring-1 focus:ring-pink-400 transition-all text-white shadow-inner" rows="3" style="font-family: 'Hadi', sans-serif;">বল বীর—
+বল উন্নত মম শির!</textarea>
+          
+          <div class="mt-4 grid grid-cols-4 gap-2">
+            <button onclick="applyFont('preview-hadi', 'Hadi', 'normal', '400')" class="py-2 bg-white/5 hover:bg-white/10 border border-white/5 text-slate-300 rounded-xl text-xs font-medium transition-all">Regular</button>
+            <button onclick="applyFont('preview-hadi', 'Hadi', 'italic', '400')" class="py-2 bg-white/5 hover:bg-white/10 border border-white/5 text-slate-300 rounded-xl text-xs font-medium transition-all italic">Italic</button>
+            <button onclick="applyFont('preview-hadi', 'Hadi', 'normal', '700')" class="py-2 bg-white/10 hover:bg-white/20 border border-white/10 text-white rounded-xl text-xs font-bold transition-all shadow-[0_0_10px_rgba(255,255,255,0.05)]">Bold</button>
+            <button onclick="applyFont('preview-hadi', 'Hadi', 'italic', '700')" class="py-2 bg-white/10 hover:bg-white/20 border border-white/10 text-white rounded-xl text-xs font-bold transition-all shadow-[0_0_10px_rgba(255,255,255,0.05)] italic">B. Italic</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="group bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-7 shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:bg-white/[0.07] hover:border-white/20 hover:shadow-[0_0_40px_-10px_rgba(56,189,248,0.3)] flex flex-col relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-400 to-blue-500 opacity-70 group-hover:opacity-100 transition-opacity"></div>
+        
+        <h2 class="text-2xl font-bold mb-6 text-white tracking-wide">July</h2>
+        
+        <div class="w-full mb-5">
+          <div class="flex items-center justify-between mb-2">
+            <label class="text-[11px] font-bold text-slate-400 uppercase tracking-widest">Import CSS</label>
+            <button class="px-3 py-1.5 bg-white/5 hover:bg-white/10 border border-white/5 rounded-lg text-xs font-medium text-slate-300 transition-all duration-200" onclick="copyToClipboard(this, '@import url(\'https://fonts.sadi.com.bd/fonts/july/font.css\');')">Copy</button>
+          </div>
+          <input class="w-full bg-black/20 border border-white/10 px-4 py-2.5 rounded-xl text-sm text-slate-300 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all font-mono" readonly value="@import url('https://fonts.sadi.com.bd/fonts/july/font.css');">
+        </div>
+
+        <div class="w-full mb-5">
+          <div class="flex items-center justify-between mb-2">
+            <label class="text-[11px] font-bold text-slate-400 uppercase tracking-widest">Embed Link</label>
+            <button class="px-3 py-1.5 bg-white/5 hover:bg-white/10 border border-white/5 rounded-lg text-xs font-medium text-slate-300 transition-all duration-200" onclick="copyToClipboard(this, '<link rel=\'stylesheet\' href=\'https://fonts.sadi.com.bd/fonts/july/font.css\'>')">Copy</button>
+          </div>
+          <input class="w-full bg-black/20 border border-white/10 px-4 py-2.5 rounded-xl text-sm text-slate-300 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all font-mono" readonly value="<link rel='stylesheet' href='https://fonts.sadi.com.bd/fonts/july/font.css'>">
+        </div>
+
+        <div class="w-full mb-8">
+          <div class="flex items-center justify-between mb-2">
+            <label class="text-[11px] font-bold text-slate-400 uppercase tracking-widest">CSS Rule</label>
+            <button class="px-3 py-1.5 bg-white/5 hover:bg-white/10 border border-white/5 rounded-lg text-xs font-medium text-slate-300 transition-all duration-200" onclick="copyToClipboard(this, 'font-family: \'July\', sans-serif;')">Copy</button>
+          </div>
+          <input class="w-full bg-black/20 border border-white/10 px-4 py-2.5 rounded-xl text-sm text-slate-300 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all font-mono" readonly value="font-family: 'July', sans-serif;">
+        </div>
+
+        <div class="w-full mt-auto">
+          <label class="text-[11px] font-bold text-slate-400 uppercase tracking-widest mb-3 block">Live Preview</label>
+          <textarea id="preview-july" class="w-full bg-black/30 border border-white/10 rounded-2xl px-5 py-5 text-2xl text-center resize-none focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all text-white shadow-inner" rows="3" style="font-family: 'July', sans-serif;">বল বীর—
+বল উন্নত মম শির!</textarea>
+          
+          <div class="mt-4 grid grid-cols-4 gap-2">
+            <button onclick="applyFont('preview-july', 'July', 'normal', '400')" class="py-2 bg-white/5 hover:bg-white/10 border border-white/5 text-slate-300 rounded-xl text-xs font-medium transition-all">Regular</button>
+            <button onclick="applyFont('preview-july', 'July', 'italic', '400')" class="py-2 bg-white/5 hover:bg-white/10 border border-white/5 text-slate-300 rounded-xl text-xs font-medium transition-all italic">Italic</button>
+            <button onclick="applyFont('preview-july', 'July', 'normal', '700')" class="py-2 bg-white/10 hover:bg-white/20 border border-white/10 text-white rounded-xl text-xs font-bold transition-all shadow-[0_0_10px_rgba(255,255,255,0.05)]">Bold</button>
+            <button onclick="applyFont('preview-july', 'July', 'italic', '700')" class="py-2 bg-white/10 hover:bg-white/20 border border-white/10 text-white rounded-xl text-xs font-bold transition-all shadow-[0_0_10px_rgba(255,255,255,0.05)] italic">B. Italic</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <footer class="mt-20 text-center text-slate-500 text-sm font-medium tracking-wide">
+      Created with ❤️ by <a href="https://web.sadi.com.bd" class="text-indigo-400 hover:text-indigo-500 transition-colors">Sadi Jubair
+    </footer>
+
+  </div>
+
+  <script>
+    // Dynamically applies the font styling
+    function applyFont(textareaId, font, style = 'normal', weight = '400') {
+      const el = document.getElementById(textareaId);
+      if (el) {
+        el.style.fontFamily = `"${font}", sans-serif`;
+        el.style.fontStyle = style;
+        el.style.fontWeight = weight;
+      }
+    }
+
+    // Handles copying text and gives a satisfying UI response
+    function copyToClipboard(btn, text) {
+      navigator.clipboard.writeText(text).then(() => {
+        const originalText = btn.textContent;
+        
+        // Apply success styles
+        btn.classList.add('copy-success');
+        btn.textContent = 'Copied!';
+        
+        // Revert back after 1.5s
+        setTimeout(() => {
+          btn.classList.remove('copy-success');
+          btn.textContent = originalText;
+        }, 1500);
+      }).catch(err => {
+        console.error('Failed to copy!', err);
+      });
+    }
+  </script>
+</body>
+</html>
